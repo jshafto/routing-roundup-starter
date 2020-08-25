@@ -9,4 +9,4 @@ The goal of this project is to create a web application using Express that will 
 - [x] Use a template to render HTML
 - [x] Define flexible route
 - [x] Capture value from URL path
-- [ ] Define collection of route handlers
+- [x] Define collection of route handlers

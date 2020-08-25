@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const profileRouter = require('./routes/profiles.js')
+
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
@@ -18,8 +20,17 @@ app.get('/capital-letters/:phrase', (req, res) => {
 })
 
 
+app.use('/margot', profileRouter)
+app.use('/margeaux', profileRouter)
 
-app.all('*', (req, res) => {
+
+
+app.all(/^\/[^\/]*$/, (req, res) => {
+    // if (req.path.split('/').length > 2) {
+    //     res.statusCode = 404;
+    //     res.send();
+    //     return;
+    // }
     // assign a variable to capture the method
     let method = req.method;
     let path = req.path;
