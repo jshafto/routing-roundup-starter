@@ -8,6 +8,17 @@ app.get('/', (req, res) => {
   res.send('Hello from Express!');
 });
 
+
+app.get(/xyz$/, (req, res) => {
+  res.send("That's all I wrote.")
+});
+
+app.get('/capital-letters/:phrase', (req, res) => {
+  res.send(req.params.phrase.toUpperCase())
+})
+
+
+
 app.all('*', (req, res) => {
     // assign a variable to capture the method
     let method = req.method;

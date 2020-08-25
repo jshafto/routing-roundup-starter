@@ -7,6 +7,6 @@ The goal of this project is to create a web application using Express that will 
 ## Project Status
 - [x] Define the default route
 - [x] Use a template to render HTML
-- [ ] Define flexible route
-- [ ] Capture value from URL path
+- [x] Define flexible route
+- [x] Capture value from URL path
 - [ ] Define collection of route handlers
